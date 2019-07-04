@@ -23,4 +23,5 @@ docker push:
   only:
   - master
   script:
-  - docker push ebewo/python-dev-docker && docker image rm ebewo/python-dev-docker
+  - docker push ebewo/python-dev-docker
+  - docker image rm ebewo/python-dev-docker
