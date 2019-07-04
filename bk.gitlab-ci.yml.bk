@@ -1,12 +1,11 @@
+image: docker:stable
+
 stages:
   - Build image
   - Push to Docker Hub
 
 docker build:
   stage: Build image
-  services:
-  - docker:dind
-  image: docker
   script:
   - docker info
   - docker build -t python-dev-docker .
